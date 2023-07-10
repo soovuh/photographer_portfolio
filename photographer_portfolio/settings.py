@@ -9,10 +9,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 from private import django_secret_key, db_password, mail_email, mail_password
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -109,11 +110,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'uk'
 LANGUAGES = (
-    ('en', 'English'),
-    ('uk', 'Ukrainian'),
-    ('de', 'German'),
+    ('uk', _('Ukrainian')),
+    ('en', _('English')),
+    ('de', _('German')),
+)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
 )
 
 TIME_ZONE = 'UTC'

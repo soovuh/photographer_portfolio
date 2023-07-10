@@ -1,47 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+    text-align: center;
+    padding: 10px 0px 5px 0px;
+    position: sticky;
+    margin-top: 5px;
+    top: 0;
+    background-color: #fff;
 }
 
-.phone {
-    text-align: right;
-    font-size: large;
+.top {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 65px 0px 65px;
+    align-items: center;
+}
+
+.languages p {
+    font-weight: bold;
+}
+
+.languages-list {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.languages-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.languages-list li:last-child {
+    margin-right: 0;
+}
+
+.languages-list a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.languages-list a.selected {
+    background-color: #ccc;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links li {
-  margin: 0 30px;
+    margin: 0 30px;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .nav-links li a:hover {
-  color: #555;
+    color: green;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #f2f2f2;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-icons a:hover {
+    color: green;
+}
+
+.footer-text {
+    margin-top: 0px;
+    font-size: 14px;
+    color: #555;
 }
