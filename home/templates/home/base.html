@@ -18,9 +18,14 @@
     <div class="languages">
         <ul class="languages-list">
             {% for language in languages %}
-                <li>
+                <li class="name">
                     <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
                         {{ language.name_local }}
+                    </a>
+                </li>
+                <li class="code">
+                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                        {{ language.code }}
                     </a>
                 </li>
             {% endfor %}
@@ -32,21 +37,19 @@
     </h3>
 </div>
 <header>
-    <h1 class="logo">Клименко Оксана</h1>
+    <h1 class="logo">KLYMENKO ОKSANA</h1>
     <nav>
         <ul class="nav-links">
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Портфоліо</a></li>
-            <li><a href="#">Ціни</a></li>
-            <li><a href="#">Блог</a></li>
-            <li><a href="#">Контакти</a></li>
-            <li><a href="#">Відгуки</a></li>
+            <li><a href="#">ГОЛОВНА</a></li>
+            <li><a href="#">ПОРТФОЛІО</a></li>
+            <li><a href="#">ЦІНИ</a></li>
+            <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">КОНТАКТИ</a></li>
+            <li><a href="#">ВІДГУКИ</a></li>
         </ul>
     </nav>
 </header>
-<section>
 
-</section>
 <footer>
     <div class="footer-content">
         <div class="social-icons">

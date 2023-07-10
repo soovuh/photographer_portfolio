@@ -29,6 +29,8 @@ header {
     justify-content: space-between;
     padding: 10px 65px 0px 65px;
     align-items: center;
+    background-color: #f2f2f2;
+
 }
 
 .languages p {
@@ -47,6 +49,10 @@ header {
     margin-right: 10px;
 }
 
+.languages-list li.code {
+    display: none;
+}
+
 .languages-list li:last-child {
     margin-right: 0;
 }
@@ -55,7 +61,7 @@ header {
     text-decoration: none;
     color: black;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #535151;
     border-radius: 5px;
     font-weight: bold;
 }
@@ -74,6 +80,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding-inline-start: 0px;
 }
 
 .nav-links li {
@@ -123,3 +130,30 @@ footer {
     font-size: 14px;
     color: #555;
 }
+
+@media (max-width: 800px) {
+    .languages-list li.code {
+        display: inline-block;
+    }
+
+    .languages-list li.name {
+        display: none;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 5px 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .top {
+        padding: 10px 5px 0px 5px;
+    }
+
+}
+
