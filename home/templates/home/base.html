@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} Photographer Klymenko Oksana</title>
-    <link rel="stylesheet" href="{% static 'home/base.css' %}">
+    <link rel="stylesheet" href="{% static 'home/styles/base.css' %}">
     {% block style %}{% endblock style %}
 </head>
 <body>
@@ -40,10 +40,10 @@
     <h1 class="logo">KLYMENKO ОKSANA</h1>
     <nav>
         <ul class="nav-links">
-            <li><a href="#">ГОЛОВНА</a></li>
             <li><a href="#">ПОРТФОЛІО</a></li>
-            <li><a href="#">ЦІНИ</a></li>
+            <li><a href="{% url 'home:about' %}">ПРО МЕНЕ</a></li>
             <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">ЦІНИ</a></li>
             <li><a href="#">КОНТАКТИ</a></li>
             <li><a href="#">ВІДГУКИ</a></li>
         </ul>
