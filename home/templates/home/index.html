@@ -5,15 +5,15 @@
 
 
 {% block content %}
-    <div class="lenta">
-        Все про мене
+    <div class="resume-header">
+        Моя історія
     </div>
-    <div class="wrapper">
+    <div class="resume">
         <div class="block">
-            <div class="photo">
+            <div class="block-photo">
                 <img src="{% static 'home/images/1_example.jpg' %}" alt="">
             </div>
-            <div class="text">
+            <div class="block-text">
                 <h2>Привіт!</h2>
                 <h3>Мене звати Клименко Оксана</h3>
                 <p>Вже в дитинстві я знала, що хочу стати фотографом. У мого діда було своє фотоательє, а тато багато
@@ -30,10 +30,10 @@
             </div>
         </div>
         <div class="block">
-            <div class="photo">
+            <div class="block-photo">
                 <img src="{% static 'home/images/2_example.jpg' %}" alt="">
             </div>
-            <div class="text">
+            <div class="block-text">
                 <h2>Чому саме я?</h2>
                 <p>Я люблю спілкуватися з людьми, дізнаватися їхні історії.</p>
                 <p>
@@ -47,10 +47,10 @@
             </div>
         </div>
         <div class="block">
-            <div class="photo">
+            <div class="block-photo">
                 <img src="{% static 'home/images/3_example.jpg' %}" alt="">
             </div>
-            <div class="text">
+            <div class="block-text">
                 <h2>На що знімаю?</h2>
                 <p>
                     Для когось це питання може здатися важливим, я ж вважаю, що головне не техніка, а вміння нею
@@ -63,8 +63,14 @@
 
 
                    <p> У запасі маю переносне світло, яке дає змогу знімати у вечірній час з якісним студійним
-                    світлом.!</p>
+                    світлом.</p>
             </div>
         </div>
+    </div>
+    <div class="achievements">
+        <div class="achievements-text">
+
+        </div>
+
     </div>
 {% endblock content %}
