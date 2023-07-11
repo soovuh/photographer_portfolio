@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photographer Klymenko Oksana</title>
+    <title>{% block title %}{% endblock %} Photographer Klymenko Oksana</title>
     <link rel="stylesheet" href="{% static 'home/base.css' %}">
+    {% block style %}{% endblock style %}
 </head>
 <body>
 <div class="top">
@@ -18,35 +19,39 @@
     <div class="languages">
         <ul class="languages-list">
             {% for language in languages %}
-                <li>
+                <li class="name">
                     <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
                         {{ language.name_local }}
+                    </a>
+                </li>
+                <li class="code">
+                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                        {{ language.code }}
                     </a>
                 </li>
             {% endfor %}
         </ul>
     </div>
-
     <h3 class="phone" style="font-size: 17px">
         +380994416374
     </h3>
 </div>
 <header>
-    <h1 class="logo">Клименко Оксана</h1>
+    <h1 class="logo">KLYMENKO ОKSANA</h1>
     <nav>
         <ul class="nav-links">
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Портфоліо</a></li>
-            <li><a href="#">Ціни</a></li>
-            <li><a href="#">Блог</a></li>
-            <li><a href="#">Контакти</a></li>
-            <li><a href="#">Відгуки</a></li>
+            <li><a href="#">ГОЛОВНА</a></li>
+            <li><a href="#">ПОРТФОЛІО</a></li>
+            <li><a href="#">ЦІНИ</a></li>
+            <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">КОНТАКТИ</a></li>
+            <li><a href="#">ВІДГУКИ</a></li>
         </ul>
     </nav>
 </header>
-<section>
 
-</section>
+{% block content %}{% endblock %}
+
 <footer>
     <div class="footer-content">
         <div class="social-icons">
@@ -60,6 +65,9 @@
         <p class="footer-text">Фотограф, Клименко Оксана © 2023 All rights reserved</p>
     </div>
 </footer>
+
+{% block script %}{% endblock %}
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
