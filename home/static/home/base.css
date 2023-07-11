@@ -27,7 +27,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 65px 0px 65px;
+    padding: 5px 65px 5px 65px;
     align-items: center;
     background-color: #f2f2f2;
 
