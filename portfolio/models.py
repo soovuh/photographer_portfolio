@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.safestring import mark_safe
 
 
 class Category(models.Model):
@@ -8,11 +9,16 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def img_preview(self):
+        return mark_safe(f'<img src = "{self.main_image.url}" width = "300"/>')
+
 
 class Photo(models.Model):
-    photo_name = models.CharField(max_length=255, blank=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='portfolio media')
 
     def __str__(self):
-        return f'{self.photo_name} ({self.category.name})'
+        return f'({self.category.name})'
+
+    def img_preview(self):
+        return mark_safe(f'<img src = "{self.image.url}" width = "300"/>')
