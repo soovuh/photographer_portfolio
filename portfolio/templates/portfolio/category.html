@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}{{ category_name }}. {% endblock title %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'portfolio/styles/category.css' %}"> {% endblock style %}
+{% block content %}
+    <div class="wrapper">
+        <div class="photos-wrapper">
+            <div class="column">
+                {% for photo in column_1 %}
+                    <a href="{% url 'portfolio:photo' photo.id %}" class="category_link">
+                        <img class="photo" src="{{ photo.image.url }}" alt="">
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for photo in column_2 %}
+                    <a href="{% url 'portfolio:photo' photo.id %}" class="category_link">
+                        <img class="photo" src="{{ photo.image.url }}" alt="">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

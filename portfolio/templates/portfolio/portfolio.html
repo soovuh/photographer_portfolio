@@ -1,6 +1,6 @@
 {% extends 'home/base.html' %}
 {% load static %}
-{% block title %}Portfolio{% endblock title %}
+{% block title %}Portfolio. {% endblock title %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'portfolio/styles/categories.css' %}"> {% endblock style %}
 {% block content %}
@@ -8,7 +8,7 @@
         <div class="categories-wrapper">
             <div class="column">
                 {% for category in column_1 %}
-                    <a href="#" class="category_link">
+                    <a href="{% url 'portfolio:category' category.id %}" class="category_link">
                         <img class="photo" src="{{ category.main_image.url }}" alt="">
                         <p class="name">{{ category.name }}</p>
                     </a>
@@ -16,7 +16,7 @@
             </div>
             <div class="column">
                 {% for category in column_2 %}
-                    <a href="#" class="category_link">
+                    <a href="{% url 'portfolio:category' category.id %}" class="category_link">
                         <img class="photo" src="{{ category.main_image.url }}" alt="">
                         <p class="name">{{ category.name }}</p>
                     </a>
@@ -24,7 +24,7 @@
             </div>
             <div class="column">
                 {% for category in column_3 %}
-                    <a href="#" class="category_link">
+                    <a href="{% url 'portfolio:category' category.id %}" class="category_link">
                         <img class="photo" src="{{ category.main_image.url }}" alt="">
                         <p class="name">{{ category.name }}</p>
                     </a>
