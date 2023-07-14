@@ -24,7 +24,6 @@ const photoLinks = getElementsArray();
 const fullscreenContainer = document.querySelector('.fullscreen-container');
 const fullscreenImage = document.querySelector('.fullscreen-image');
 const fullscreenClose = document.querySelector('.fullscreen-close');
-const fullscreenArrows = document.querySelector('.fullscreen-arrows');
 const fullscreenArrowBack = document.querySelector('.fullscreen-arrow[name="chevron-back"]');
 const fullscreenArrowForward = document.querySelector('.fullscreen-arrow[name="chevron-forward"]');
 let currentPhotoIndex = 0;
