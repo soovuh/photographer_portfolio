@@ -33,11 +33,13 @@ function showFullscreenPhoto(index) {
     fullscreenImage.src = photoLinks[index].querySelector('img').src;
     staticBody.classList.add('static')
     fullscreenContainer.classList.add('show');
+    fullscreenImage.classList.add('fade_in');
 }
 
 function hideFullscreenPhoto() {
     fullscreenContainer.classList.remove('show');
     staticBody.classList.remove('static');
+    fullscreenImage.classList.remove('fade_in');
 }
 
 photoLinks.forEach((link, index) => {
@@ -52,11 +54,17 @@ fullscreenClose.addEventListener('click', () => {
 
 fullscreenArrowBack.addEventListener('click', () => {
     currentPhotoIndex = (currentPhotoIndex - 1 + photoLinks.length) % photoLinks.length;
-    showFullscreenPhoto(currentPhotoIndex);
+    fullscreenImage.classList.remove('fade_in')
+    setTimeout(() => {
+        showFullscreenPhoto(currentPhotoIndex);
+    }, 150);
+
 });
 
-// Обработчик события при нажатии на стрелку вправо
 fullscreenArrowForward.addEventListener('click', () => {
     currentPhotoIndex = (currentPhotoIndex + 1) % photoLinks.length;
-    showFullscreenPhoto(currentPhotoIndex);
+    fullscreenImage.classList.remove('fade_in')
+    setTimeout(() => {
+        showFullscreenPhoto(currentPhotoIndex);
+    }, 150);
 });
