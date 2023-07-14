@@ -161,7 +161,11 @@ footer {
 
 @media (max-width: 520px) {
     .top {
-        padding: 10px 5px 0px 5px;
+        padding: 10px 5px 10px 5px;
+    }
+
+    header {
+        padding: 20px 0px;
     }
 
 }

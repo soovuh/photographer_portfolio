@@ -6,20 +6,31 @@
 {% block content %}
     <div class="wrapper">
         <div class="photos-wrapper">
-            <div class="column">
+            <div class="column first">
                 {% for photo in column_1 %}
-                    <a href="{% url 'portfolio:photo' photo.id %}" class="category_link">
+                    <div class="photo_link">
                         <img class="photo" src="{{ photo.image.url }}" alt="">
-                    </a>
+                    </div>
                 {% endfor %}
             </div>
-            <div class="column">
+            <div class="column second">
                 {% for photo in column_2 %}
-                    <a href="{% url 'portfolio:photo' photo.id %}" class="category_link">
+                    <div class="photo_link">
                         <img class="photo" src="{{ photo.image.url }}" alt="">
-                    </a>
+                    </div>
                 {% endfor %}
             </div>
         </div>
     </div>
+    <div class="fullscreen-container">
+        <img class="fullscreen-image" src="" alt="">
+        <div class="fullscreen-close">&times;</div>
+        <div class="fullscreen-arrows">
+            <ion-icon class="fullscreen-arrow" name="chevron-back"></ion-icon>
+            <ion-icon class="fullscreen-arrow" name="chevron-forward"></ion-icon>
+        </div>
+    </div>
 {% endblock content %}
+{% block script %}
+    <script type="module" src="{% static 'portfolio/scripts/photoScroll.js' %}"></script>
+{% endblock %}

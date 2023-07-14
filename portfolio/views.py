@@ -38,15 +38,3 @@ def category_photos(request, pk):
     })
 
 
-def photo(request, pk):
-    photo = get_object_or_404(Photo, pk=pk)
-    category = photo.category
-    category_photos = Photo.objects.filter(category=photo.category).order_by('id')
-    previous_photo = category_photos.filter(id__lt=photo.id).last()
-    next_photo = category_photos.filter(id__gt=photo.id).first()
-    return render(request, 'portfolio/photo.html', {
-        'photo': photo,
-        'category': category,
-        'previous_photo': previous_photo,
-        'next_photo': next_photo,
-    })
