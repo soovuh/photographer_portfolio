@@ -3,7 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+body.static {
+    overflow: hidden;
 }
 
 .photos-wrapper {
@@ -12,12 +15,14 @@
     display: flex;
     width: 80%;
     gap: 20px;
+    justify-content: center;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 40%;
 }
 
 .photo_link {
@@ -28,14 +33,11 @@
     text-decoration: none;
     color: black;
     z-index: 98;
-    transition: transform 0.2s;
+    cursor: pointer;
 }
 
 
 
-.photo_link:hover {
-    transform: scale(1.03);
-}
 
 img {
     max-width: 100%;
@@ -51,10 +53,72 @@ img {
     border-radius: 5px;
 }
 
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.fullscreen-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    height: 80%;
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: black;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.fullscreen-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fullscreen-arrow {
+    color: black;
+    font-size: 36px;
+    margin: 0 20px;
+    cursor: pointer;
+    pointer-events: auto;
+}
 
 
-@media(max-width: 768px) {
+
+
+@media (max-width: 768px) {
     .photos-wrapper {
         flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
     }
 }
