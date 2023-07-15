@@ -4,5 +4,30 @@
 {% block style %}
     <link rel="stylesheet" href="{% static 'blog/styles/all.css' %}"> {% endblock style %}
 {% block content %}
-    blog
+    <div class="wrapper">
+        <div class="blog-wrapper">
+            {% for post in posts %}
+                <div class="blog">
+                    <a href="#">
+                    <div class="blog-head">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.created_at|date:"d.m.Y" }}</p>
+                        <a href="#">{{ post.intro }}</a>
+                    </div>
+                        </a>
+                    <div class="blog-image">
+                        <img src="{{ post.image.url }}" alt="">
+                    </div>
+                    <div class="blog-text">
+                        {{ post.text|safe }}
+                    </div>
+
+                </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+
 {% endblock content %}
