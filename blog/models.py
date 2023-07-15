@@ -7,6 +7,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='blog_media', blank=True)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    likes = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title

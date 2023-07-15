@@ -8,19 +8,28 @@
         <div class="blog-wrapper">
             {% for post in posts %}
                 <div class="blog">
-                    <a href="#">
-                        <div class="blog-head">
-                            <h2>{{ post.title }}</h2>
-                            <p>{{ post.created_at|date:"d.m.Y" }}</p>
-                            <a href="#">{{ post.intro }}</a>
-                        </div>
-                    </a>
+
+                    <div class="blog-head">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.created_at|date:"d.m.Y" }}</p>
+                        <p>{{ post.intro }}</p>
+                    </div>
+
                     <div class="blog-image">
                         <img src="{{ post.image.url }}" alt="">
                     </div>
                     <div class="blog-text">
                         {{ post.text|safe }}
                     </div>
+                    <div class="like-block">
+                        {% csrf_token %}
+                        <button class="like-button{% if post.id in liked_posts %} liked{% endif %}"
+                                data-post-id="{{ post.id }}">
+                            <ion-icon name="heart"></ion-icon>
+                        </button>
+                        <span class="like-count">{{ post.likes }}</span>
+                    </div>
+
 
                 </div>
                 <div class="endline">
@@ -30,7 +39,8 @@
             <div class="pagination">
                 <span class="step-links">
                     {% if posts.has_previous %}
-                        <a href="?page={{ posts.previous_page_number }}"><ion-icon name="chevron-back-outline"></ion-icon></a>
+                        <a href="?page={{ posts.previous_page_number }}"><ion-icon
+                                name="chevron-back-outline"></ion-icon></a>
                     {% else %}
                         <span class="inactive"><ion-icon name="chevron-back-outline"></ion-icon></span>
                     {% endif %}
@@ -40,7 +50,8 @@
                     </span>
 
                     {% if posts.has_next %}
-                        <a href="?page={{ posts.next_page_number }}"><ion-icon name="chevron-forward-outline"></ion-icon></a>
+                        <a href="?page={{ posts.next_page_number }}"><ion-icon
+                                name="chevron-forward-outline"></ion-icon></a>
                     {% else %}
                         <span class="inactive"><ion-icon name="chevron-forward-outline"></ion-icon></span>
                     {% endif %}
@@ -52,3 +63,6 @@
 
 
 {% endblock content %}
+{% block script %}
+    <script type="module" src="{% static 'blog/scripts/likePosts.js' %}"></script>
+{% endblock %}

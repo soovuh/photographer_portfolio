@@ -83,7 +83,7 @@
     margin-top: 0;
     font-size: 16px;
     line-height: 1.6;
-    padding: 30px;
+    padding: 30px 30px 0px 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -138,6 +138,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.like-block {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 2px 5% 10px 5%;
+}
+
+.like-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    color: #939393;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.like-button:disabled {
+   color: darkslategray;
+    cursor: unset;
+}
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+.like-count {
+    font-size: 15px;
 }
 
 @media (max-width: 750px) {
