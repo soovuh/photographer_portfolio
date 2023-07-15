@@ -9,12 +9,12 @@
             {% for post in posts %}
                 <div class="blog">
                     <a href="#">
-                    <div class="blog-head">
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.created_at|date:"d.m.Y" }}</p>
-                        <a href="#">{{ post.intro }}</a>
-                    </div>
-                        </a>
+                        <div class="blog-head">
+                            <h2>{{ post.title }}</h2>
+                            <p>{{ post.created_at|date:"d.m.Y" }}</p>
+                            <a href="#">{{ post.intro }}</a>
+                        </div>
+                    </a>
                     <div class="blog-image">
                         <img src="{{ post.image.url }}" alt="">
                     </div>
@@ -23,8 +23,29 @@
                     </div>
 
                 </div>
+                <div class="endline">
+                </div>
 
             {% endfor %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if posts.has_previous %}
+                        <a href="?page={{ posts.previous_page_number }}"><ion-icon name="chevron-back-outline"></ion-icon></a>
+                    {% else %}
+                        <span class="inactive"><ion-icon name="chevron-back-outline"></ion-icon></span>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                    </span>
+
+                    {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}"><ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    {% else %}
+                        <span class="inactive"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                    {% endif %}
+                </span>
+            </div>
         </div>
 
     </div>
