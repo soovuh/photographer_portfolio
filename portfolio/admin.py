@@ -4,10 +4,10 @@ from portfolio.models import Photo, Category
 
 
 @admin.register(Category)
-class ShoeAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ['img_preview']
 
 
 @admin.register(Photo)
-class ShoeAdmin(admin.ModelAdmin):
+class PhotoAdmin(admin.ModelAdmin):
     readonly_fields = ['img_preview']

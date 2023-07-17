@@ -1,0 +1,203 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.blog-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.blog {
+    min-width: 70%;
+    max-width: 100%;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-image img {
+    border-radius: 20px;
+    width: 70%;
+}
+
+.blog-head {
+    width: 100%;
+    background-color: darkslategray;
+    padding: 30px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.blog-head h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.blog-head p {
+    margin: 5px 0;
+    font-size: 17px;
+    color: #d0d0d0;
+}
+
+.blog-head a {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.endline {
+    border-bottom: 1px solid;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+
+.blog-text {
+    max-width: 800px;
+    margin: 15px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 30px 30px 0px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.blog-text p {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #555;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.pagination .inactive {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #b2b1b1;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.pagination a:hover {
+    color: green;
+}
+
+.pagination .current {
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: darkslategray;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.step-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-block {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 2px 5% 10px 5%;
+}
+
+.like-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    color: #939393;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.like-button:disabled {
+   color: darkslategray;
+    cursor: unset;
+}
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+.like-count {
+    font-size: 15px;
+}
+
+@media (max-width: 750px) {
+    .blog-head h2 {
+        font-size: 20px;
+    }
+
+    .blog-head p {
+        font-size: 15px;
+    }
+
+    .blog-head intro {
+        font-size: 17px;
+    }
+
+    .blog-wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 550px) {
+    .blog-text {
+        text-align: start;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+}
+

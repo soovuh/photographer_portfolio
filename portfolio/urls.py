@@ -7,4 +7,5 @@ app_name = 'portfolio'
 urlpatterns = [
     path('', views.all_categories, name='portfolio'),
     path('<int:pk>/', views.category_photos, name='category'),
+
 ]
