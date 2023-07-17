@@ -140,6 +140,29 @@ footer {
     color: #555;
 }
 
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.scroll-to-top.show {
+    display: block;
+}
+
+.scroll-to-top:hover {
+    color: #535151;
+}
+
 @media (max-width: 800px) {
     .languages-list li.code {
         display: inline-block;
@@ -158,6 +181,16 @@ footer {
         margin: 5px 15px;
     }
 }
+
+@media (max-width: 750px) {
+    .scroll-to-top {
+        display: none;
+    }
+    .scroll-to-top.show {
+        display: none;
+    }
+}
+
 
 @media (max-width: 520px) {
     .top {
