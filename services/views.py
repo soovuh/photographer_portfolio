@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+from services.models import Service
+
+
+def all_services(request):
+    services = Service.objects.all()
+
+    return render(request, 'services/all_services.html', {
+        'services': services,
+    })
