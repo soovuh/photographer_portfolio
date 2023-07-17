@@ -1,7 +1,47 @@
 {% extends 'home/base.html' %}
 {% load static %}
-{% block style %}{% endblock style %}
-
+{% block style %}
+    <link rel="stylesheet" href="{% static 'services/styles/services.css' %}">{% endblock style %}
+{% block title %}Prices. {% endblock title %}
 
 {% block content %}
+
+    <div class="wrapper">
+        <div class="service-wrapper">
+            {% for service in services %}
+                <div class="service">
+                    <div class="service-head">
+                        <h2>{{ service.name }}</h2>
+                        <p>{{ service.price }}€</p>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="service-image">
+                            <img src="{{ service.image.url }}" alt="">
+                        </div>
+                        <div class="text-info">
+                            <div class="service-include">
+                                <h3>Послуга включє:</h3>
+                                <ul>
+                                    {% for item in service.service_items.all %}
+                                        <li>{{ item.item_info }};</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="service-info">
+                                <p>
+                                    {{ service.info }}
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="endline">
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
 {% endblock content %}
