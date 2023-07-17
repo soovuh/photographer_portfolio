@@ -2,9 +2,8 @@ from django.urls import path
 
 from services import views
 
-app_name = 'blog'
+app_name = 'services'
 
 urlpatterns = [
-    path('', views.all_posts, name='all_posts'),
-    path('like/<int:post_id>/', views.like_post, name='like_post'),
+    path('', views.all_services, name='all_services'),
 ]

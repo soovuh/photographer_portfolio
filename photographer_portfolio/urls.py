@@ -4,9 +4,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('portfolio.urls')),
-    path('about/', include('home.urls')),
-    path('blog/', include('blog.urls')),
-    path('admin/', admin.site.urls),
-] + static(settings.MEDIA_ROOT, document_root=settings.MEDIA_ROOT)
-
+                  path('', include('portfolio.urls')),
+                  path('about/', include('home.urls')),
+                  path('blog/', include('blog.urls')),
+                  path('services/', include('services.urls')),
+                  path('admin/', admin.site.urls),
+              ] + static(settings.MEDIA_ROOT, document_root=settings.MEDIA_ROOT)
