@@ -4,7 +4,36 @@
 {% block style %}
     <link rel="stylesheet" href="{% static 'reviews/styles/all_reviews.css' %}"> {% endblock style %}
 {% block content %}
-    Reviews
+    <div class="wrapper">
+        <div class="reviews">
+            <div class="endline"></div>
+            {% for review in reviews %}
+                <div class="review">
+                    <div class="image-block">
+                        <img src="{% if review.owner_image %}
+                                {{ review.owner_image.url }}
+                                {% else %}
+                                {% static 'reviews/images/person-icon.png' %}
+                                {% endif %}"
+                             alt="">
+                    </div>
+                    <div class="text-block">
+                        <div class="text-head">
+                            <h2>{{ review.owner_name }}</h2>
+                            <p>{{ review.created_at|date:"d.m.Y" }}</p>
+                        </div>
+                        {% if review.owner_social %}
+                            <a href="{{ review.owner_social }}">{{ review.owner_social }}</a>
+                        {% endif %}
+                        <p>{{ review.owner_review }}</p>
+
+                    </div>
+                </div>
+                <div class="endline"></div>
+            {% endfor %}
+
+        </div>
+    </div>
 {% endblock content %}
 {% block script %}
 {% endblock %}

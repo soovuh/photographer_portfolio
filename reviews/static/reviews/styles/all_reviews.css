@@ -1,0 +1,86 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.reviews {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review {
+    margin: 30px 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-block {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 15px;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+.image-block img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+     border: 2px solid grey;
+    border-radius: 500px;
+}
+
+
+.text-block {
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+    height: 100%;
+    padding: 15px 20px 20px 20px;
+    word-break: break-all;
+}
+
+.text-block h2 {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.text-block a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.text-head p {
+    color: gray;
+}
+
+.text-block a:hover {
+    text-decoration: underline;
+}
+
+.text-block p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+
+.endline {
+    border-bottom: 2px solid darkslategray;
+    display: flex;
+    width: 90%;
+}
