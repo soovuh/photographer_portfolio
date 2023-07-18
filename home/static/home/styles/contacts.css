@@ -47,3 +47,162 @@
     margin-bottom: 5px;
 }
 
+.social-links {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 25px;
+    background-color: darkslategray;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    width: 300px;
+    padding: 15px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    transition: background-color 0.3s, color 0.2s;
+}
+
+.social-links a ion-icon {
+    margin-right: 5px;
+}
+
+.social-links a:hover {
+    color: darkslategray;
+    background-color: #fff;
+}
+
+.email-send {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: end;
+    justify-content: right;
+    margin: 20px 0;
+
+}
+
+.form-container {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-send-head {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 20px;
+    color: darkslategray;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input,
+.form-textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid darkslategray;
+    font-weight: 600;
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: gray;
+}
+
+textarea::placeholder {
+    font-weight: 500;
+    color: gray;
+}
+
+.form-textarea {
+    resize: none;
+    height: 150px;
+}
+
+.div-btn {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: darkslategray;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s;
+    font-weight: 600;
+    border: 2px solid darkslategray;
+    margin-top: 10px;
+}
+
+
+button:hover {
+    background-color: #fff;
+    color: darkslategray;
+}
+
+button:active {
+    background-color: #003c80;
+}
+
+@media (max-width: 750px) {
+    .main-text h1 {
+        font-size: 17px;
+    }
+
+    .main-text h2 {
+        font-size: 15px;
+    }
+
+    .main-text h3 {
+        font-size: 15px;
+    }
+
+    .email-send {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .div-btn {
+        justify-content: center;
+        align-items: center;
+    }
+}
