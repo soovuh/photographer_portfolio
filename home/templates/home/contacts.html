@@ -1,9 +1,34 @@
 {% extends 'home/base.html' %}
 {% load static %}
 {% block title %}Contacts. {% endblock title %}
-{% block style %}{% endblock style %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'home/styles/contacts.css' %}">{% endblock style %}
 {% block content %}
+    <div class="wrapper">
+        <div class="main-info">
+            <div class="main-photo">
+                <img src="{% static 'home/images/3_example.jpg' %}" alt="">
+            </div>
+            <div class="main-text">
+                <h1>КЛИМЕНКО ОКСАНА</h1>
+                <h2>sovuh2703@gmail.com</h2>
+                <h3>+4915121684492</h3>
+                <h3>+380663751926</h3>
+            </div>
+        </div>
+        <div class="social-links">
+
+        </div>
+        <div class="email-send">
+            {#            <form method="post" action=".">#}
+            {#                {% csrf_token %}#}
+            {#                {{ form.as_p }}#}
+            {#                <button>Submit</button>#}
+            {#            </form>#}
+        </div>
+    </div>
 
 {% endblock content %}
+
 {% block script %}
 {% endblock %}
