@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}{{ category_name }}. {% endblock title %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'reviews/styles/all_reviews.css' %}"> {% endblock style %}
+{% block content %}
+    Reviews
+{% endblock content %}
+{% block script %}
+{% endblock %}
