@@ -1,12 +1,14 @@
 {% extends 'home/base.html' %}
 {% load static %}
-{% block title %}{{ category_name }}. {% endblock title %}
+{% block title %}Reviewss. {% endblock title %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'reviews/styles/all_reviews.css' %}"> {% endblock style %}
 {% block content %}
     <div class="wrapper">
+        <div class="create-review">
+            <span class="create">Залишити відгук</span>
+        </div>
         <div class="reviews">
-            <div class="endline"></div>
             {% for review in reviews %}
                 <div class="review">
                     <div class="image-block">

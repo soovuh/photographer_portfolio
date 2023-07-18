@@ -1,5 +1,6 @@
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
+from django.utils.html import escape
 
 
 class Review(models.Model):
