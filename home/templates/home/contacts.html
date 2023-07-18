@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Contacts. {% endblock title %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'home/styles/contacts.css' %}">{% endblock style %}
+{% block content %}
+    <div class="wrapper">
+        <div class="main-info">
+            <div class="main-photo">
+                <img src="{% static 'home/images/3_example.jpg' %}" alt="">
+            </div>
+            <div class="main-text">
+                <h1>КЛИМЕНКО ОКСАНА</h1>
+                <h2>sovuh2703@gmail.com</h2>
+                <h3>+4915121684492</h3>
+                <h3>+380663751926</h3>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com/klimenko_foto?igshid=NTc4MTIwNjQ2YQ==">
+                <ion-icon name="logo-instagram"></ion-icon>
+                Instagram</a>
+            <a href="https://www.facebook.com/ksuha.klimenko">
+                <ion-icon name="logo-facebook"></ion-icon>
+                Facebook</a>
+            <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+                WhatsApp</a>
+        </div>
+        <div class="email-send">
+            <div class="form-container">
+                <div class="email-send-head"><h2>Зв'яжіться з нами</h2></div>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" class="form-input" placeholder="Ваше ім'я" name="{{ form.name.name }}" id="{{ form.name.id_for_label }}"
+                           required>
+                    <input type="email" class="form-input" placeholder="Ваш email" name="{{ form.email.name }}"
+                           id="{{ form.email.id_for_label }}" required>
+                    <textarea class="form-textarea" placeholder="Ваше повідомлення" name="{{ form.content.name }}" id="{{ form.content.id_for_label }}"
+                              required></textarea>
+                    <div class="div-btn">
+                        <button>Відправити</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block script %}
+{% endblock %}

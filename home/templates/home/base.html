@@ -44,7 +44,7 @@
             <li><a href="{% url 'home:about' %}">ПРО МЕНЕ</a></li>
             <li><a href="{% url 'blog:all_posts' %}">БЛОГ</a></li>
             <li><a href="{% url 'services:all_services' %}">ЦІНИ</a></li>
-            <li><a href="#">КОНТАКТИ</a></li>
+            <li><a href="{% url 'home:contacts' %}">КОНТАКТИ</a></li>
             <li><a href="#">ВІДГУКИ</a></li>
         </ul>
     </nav>
@@ -69,8 +69,26 @@
     </div>
 </footer>
 
-{% block script %}{% endblock %}
+<button class="scroll-to-top" onclick="scrollToTop()">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</button>
+<script>
+    function checkScroll() {
+        const scrollButton = document.querySelector('.scroll-to-top');
+        if (window.scrollY >= 200) {
+            scrollButton.classList.add('show');
+        } else {
+            scrollButton.classList.remove('show');
+        }
+    }
 
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    window.addEventListener('scroll', checkScroll);
+</script>
+{% block script %}{% endblock %}
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
