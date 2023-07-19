@@ -4,6 +4,25 @@
 {% block style %}
     <link rel="stylesheet" href="{% static 'reviews/styles/all_reviews.css' %}"> {% endblock style %}
 {% block content %}
+    <div class="review-form">
+        <h1>Review Form</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" class="form-input" placeholder="Owner Name" name="{{ form.owner_name.name }}"
+                   id="{{ form.owner_name.id_for_label }}" required>
+            <input type="url" class="form-input" placeholder="Owner Social URL" name="{{ form.owner_social.name }}"
+                   id="{{ form.owner_social.id_for_label }}" maxlength="200">
+            <input type="file" class="form-input" name="{{ form.owner_image.name }}"
+                   id="{{ form.owner_image.id_for_label }}"
+                   accept="image/*">
+            <textarea class="form-textarea" placeholder="Owner Review (Min 30 characters, Max 1000 characters)"
+                      name="{{ form.owner_review.name }}"
+                      id="{{ form.owner_review.id_for_label }}" required minlength="30" maxlength="1000"></textarea>
+            <div class="div-btn">
+                <button type="submit">Submit Review</button>
+            </div>
+        </form>
+    </div>
     <div class="wrapper">
         <div class="create-review">
             <span class="create">Залишити відгук</span>
