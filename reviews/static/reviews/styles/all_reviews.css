@@ -37,7 +37,7 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
-     border: 2px solid grey;
+    border: 2px solid grey;
     border-radius: 500px;
 }
 
@@ -115,5 +115,33 @@
 .create-review span:hover {
     background-color: #fff;
     color: darkslategray;
+}
+
+@media (max-width: 650px) {
+    .review {
+        flex-direction: column;
+    }
+    .text-block {
+        width: 100%;
+        text-align: center;
+    }
+        .text-block a {
+        width: 100%;
+        text-align: center;
+    }
+    .image-block {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
 }
 
