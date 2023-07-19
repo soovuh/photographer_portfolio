@@ -1,0 +1,343 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-direction: column;
+}
+
+.reviews {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review {
+    margin: 30px 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-block {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 15px;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+.image-block img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid grey;
+    border-radius: 500px;
+}
+
+
+.text-block {
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+    height: 100%;
+    padding: 15px 20px 20px 20px;
+    /*word-break: break-all;*/
+}
+
+.text-block h2 {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.text-block a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.text-head p {
+    color: gray;
+}
+
+.text-block a:hover {
+    text-decoration: underline;
+}
+
+.text-block p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-weight: 600;
+    white-space: pre-wrap;
+}
+
+
+.endline {
+    border-bottom: 2px solid darkslategray;
+    display: flex;
+    width: 90%;
+}
+
+.create-review {
+    width: 100%;
+    height: 100px;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-review span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    width: 300px;
+    padding: 15px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    transition: background-color 0.3s, color 0.2s;
+    cursor: pointer;
+}
+
+.create-review span:hover {
+    background-color: #fff;
+    color: darkslategray;
+}
+
+.center-screen {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.35);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 103;
+}
+
+.review-form {
+    position: relative;
+    width: 60%;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.center-screen.show {
+    display: flex;
+}
+
+.review-form h1 {
+    margin-bottom: 20px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.text-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input,
+.form-textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid darkslategray;
+    font-weight: 600;
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: gray;
+}
+
+textarea::placeholder {
+    font-weight: 500;
+    color: gray;
+}
+
+.form-textarea {
+    resize: none;
+    height: 150px;
+}
+
+.div-btn {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;;
+    border-radius: 20px;
+    background-color: darkslategray;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s;
+    font-weight: 600;
+    border: 2px solid darkslategray;
+    margin-top: 10px;
+}
+
+
+button:hover {
+    background-color: #fff;
+    color: darkslategray;
+}
+
+button:active {
+    background-color: #003c80;
+}
+
+.custom-file-input {
+    display: inline-block;
+    width: 40%;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s;
+    font-weight: 600;;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-align: right;
+}
+
+.choose-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.choose-block span {
+    text-decoration: underline;
+}
+
+.choose-block span:hover {
+    text-decoration: none;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 300px;
+    object-fit: cover;
+    border: 2px solid darkslategray;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ion-icon {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+@media (max-width: 1000px) {
+    .inputs {
+        flex-direction: column;
+    }
+
+    .custom-file-input {
+        width: 100%;
+    }
+
+    .text-inputs {
+        width: 100%;
+    }
+
+    .div-btn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .review {
+        flex-direction: column;
+    }
+
+    .review-form {
+        width: 95%;
+    }
+
+
+    .text-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-block a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-block {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+}
+
