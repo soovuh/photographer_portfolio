@@ -28,7 +28,7 @@
                                id="{{ form.owner_image.id_for_label }}"
                                accept="image/*" onchange="previewImage(event)">
                         <div class="choose-block">
-                            <img id="preview" src="{% static 'reviews/images/add_photo.png' %}" alt="Preview"><br>
+                            <img id="preview" src="{% static 'reviews/images/add_photo.jpg' %}" alt="Preview"><br>
                             <span>Вибрати фото</span>
                         </div>
 
@@ -51,7 +51,7 @@
                         <img src="{% if review.owner_image %}
                                 {{ review.owner_image.url }}
                                 {% else %}
-                                {% static 'reviews/images/person-icon.png' %}
+                                {% static 'reviews/images/person_icon.jpg' %}
                                 {% endif %}"
                              alt="">
                     </div>
@@ -74,7 +74,6 @@
     </div>
 {% endblock content %}
 {% block script %}
-    <script type="module" src="{% static 'reviews/scripts/create_review.js' %}"></script>
     <script>
         function previewImage(event) {
             const preview = document.getElementById('preview');
@@ -88,8 +87,22 @@
             if (file) {
                 reader.readAsDataURL(file);
             } else {
-                preview.src = "default-image.jpg"; // Show the default image if no file is selected
+                preview.src = "{% static 'reviews/images/add_photo.jpg' %}";
             }
         }
+
+        const createBtn = document.querySelector('.create');
+        const createReviewForm = document.querySelector('.center-screen');
+        const createReviewFormBlock = document.querySelector('.review-form');
+        const closeIcon = document.querySelector('.close-icon');
+        createBtn.addEventListener('click', () => {
+            createReviewForm.classList.add('show');
+        })
+
+        document.addEventListener("click", (event) => {
+            if (!createReviewFormBlock.contains(event.target) && !createBtn.contains(event.target) || closeIcon.contains(event.target)) {
+                createReviewForm.classList.remove('show');
+            }
+        });
     </script>
 {% endblock script %}
