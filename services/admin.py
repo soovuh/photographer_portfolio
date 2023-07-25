@@ -27,4 +27,5 @@ class ServiceItemInline(admin.TabularInline):
 
 @admin.register(Service)
 class PostAdmin(admin.ModelAdmin):
+    readonly_fields = ['img_preview']
     inlines = [ServiceItemInline]

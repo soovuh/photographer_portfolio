@@ -5,5 +5,5 @@ from reviews.models import Review
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ['img_preview']
 
