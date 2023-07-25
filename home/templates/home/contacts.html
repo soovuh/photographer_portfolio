@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}Contacts. {% endblock title %}
 {% block style %}
@@ -10,7 +11,7 @@
                 <img src="{% static 'home/images/3_example.jpg' %}" alt="">
             </div>
             <div class="main-text">
-                <h1>КЛИМЕНКО ОКСАНА</h1>
+                <h1>{% trans "КЛИМЕНКО ОКСАНА" %}</h1>
                 <h2>klymenko.photo5@gmail.com</h2>
                 <h3>+4915121684492</h3>
                 <h3>+380663751926</h3>
@@ -29,17 +30,17 @@
         </div>
         <div class="email-send">
             <div class="form-container">
-                <div class="email-send-head"><h2>Зв'яжіться зі мною</h2></div>
+                <div class="email-send-head"><h2>{% trans "Зв'яжіться зі мною" %}</h2></div>
                 <form method="post">
                     {% csrf_token %}
-                    <input type="text" class="form-input" placeholder="Ваше ім'я" name="{{ form.name.name }}" id="{{ form.name.id_for_label }}"
+                    <input type="text" class="form-input" placeholder="{% trans "Ваше ім'я" %}" name="{{ form.name.name }}" id="{{ form.name.id_for_label }}"
                            required>
-                    <input type="email" class="form-input" placeholder="Ваш email" name="{{ form.email.name }}"
+                    <input type="email" class="form-input" placeholder="{% trans "Ваш email" %}" name="{{ form.email.name }}"
                            id="{{ form.email.id_for_label }}" required>
-                    <textarea class="form-textarea" placeholder="Ваше повідомлення" name="{{ form.content.name }}" id="{{ form.content.id_for_label }}"
+                    <textarea class="form-textarea" placeholder="{% trans "Ваше повідомлення" %}" name="{{ form.content.name }}" id="{{ form.content.id_for_label }}"
                               required></textarea>
                     <div class="div-btn">
-                        <button>Відправити</button>
+                        <button>{% trans "Відправити" %}</button>
                     </div>
 
                 </form>

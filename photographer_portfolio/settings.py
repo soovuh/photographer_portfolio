@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,6 +140,7 @@ USE_TZ = True
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # DEBUG=False
+# AWS settings
 AWS_ACCESS_KEY_ID = aws_access_key_id
 AWS_SECRET_ACCESS_KEY = aws_secret_access_key
 AWS_STORAGE_BUCKET_NAME = aws_storage_bucket_name

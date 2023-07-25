@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-25 14:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\templates\blog\all.html:50
+msgid "Сторінка "
+msgstr "Seite "
+
+#: .\blog\templates\blog\all.html:50
+msgid "з "
+msgstr "von "
+
+#: .\home\templates\home\base.html:45
+msgid "ПОРТФОЛІО"
+msgstr "PORTFOLIO"
+
+#: .\home\templates\home\base.html:46
+msgid "ПРО МЕНЕ"
+msgstr "ÜBER MICH"
+
+#: .\home\templates\home\base.html:47
+msgid "БЛОГ"
+msgstr "BLOG"
+
+#: .\home\templates\home\base.html:48
+msgid "ЦІНИ"
+msgstr "PREISE"
+
+#: .\home\templates\home\base.html:49
+msgid "КОНТАКТИ"
+msgstr "KONTAKT"
+
+#: .\home\templates\home\base.html:50
+msgid "ВІДГУКИ"
+msgstr "REVIEWS"
+
+#: .\home\templates\home\base.html:70
+msgid "Фотограф, Клименко Оксана"
+msgstr "Fotografin, Oksana Klymenko"
+
+#: .\home\templates\home\contacts.html:14
+msgid "КЛИМЕНКО ОКСАНА"
+msgstr "KLYMENKO OKSANA"
+
+#: .\home\templates\home\contacts.html:33
+msgid "Зв'яжіться зі мною"
+msgstr "Kontaktieren Sie mich"
+
+#: .\home\templates\home\contacts.html:36
+msgid "Ваше ім'я"
+msgstr "Ihr Name"
+
+#: .\home\templates\home\contacts.html:38
+msgid "Ваш email"
+msgstr "Deine E-Mail"
+
+#: .\home\templates\home\contacts.html:40
+msgid "Ваше повідомлення"
+msgstr "Ihre Nachricht"
+
+#: .\home\templates\home\contacts.html:43
+#: .\reviews\templates\reviews\all_reviews.html:39
+msgid "Відправити"
+msgstr "Senden Sie"
+
+#: .\home\templates\home\index.html:10
+msgid "Moя історія"
+msgstr "Meine Story"
+
+#: .\home\templates\home\index.html:18
+msgid "Вітаю!"
+msgstr ""
+
+#: .\home\templates\home\index.html:19
+msgid ""
+"Мене звуть Оксана, і я рада вітати вас на своєму веб-сайті. Фотографія "
+"завжди була моїм хобі, але з часом вона перетворилася на мою справжню "
+"пристрасть. Сьогодні я вирішила піти далі і розвиватися в цій сфері "
+"професійно."
+msgstr ""
+
+#: .\home\templates\home\index.html:21
+msgid ""
+"Мої фотографії створені з любов'ю до деталей та вмінням уловлювати моменти. "
+"Я намагаюся передати емоції, красу та історію кожного моменту через об'єктив "
+"моєї камери. Будь-який важливий момент вашого життя, будь то весілля, "
+"сімейна зустріч, випускний вечір або просто незабутня прогулянка, заслуговує "
+"бути запам'ятаним у найкращій форм"
+msgstr ""
+
+#: .\home\templates\home\index.html:30
+msgid "Чому саме я?"
+msgstr ""
+
+#: .\home\templates\home\index.html:31
+msgid ""
+"Я завжди стараюся підійти до кожного зйомки індивідуально, розуміючи "
+"унікальність кожної людини та події. Моя мета - зафіксувати натуральність та "
+"спеціальні моменти, які створять незабутню пам'ять. Я вірю, що фотографія "
+"може зберегти миттєвості, що минають так швидко, і створити вам згадки на "
+"все життя."
+msgstr ""
+
+#: .\home\templates\home\index.html:32
+msgid ""
+"На моєму сайті ви зможете ознайомитися з моїми роботами та відчути "
+"атмосферу, яку я створюю в кожній фотографії. Я також рада зустрітися з вами "
+"особисто, обговорити ваші побажання та домовитися про зйомку. Разом ми "
+"можемо створити щось особливе і неповторне."
+msgstr ""
+
+#: .\home\templates\home\index.html:40
+msgid "Чекаю на зустріч!"
+msgstr ""
+
+#: .\home\templates\home\index.html:42
+msgid ""
+"Дякую, що зайшли на мій веб-сайт. З нетерпінням очікую можливість зберегти "
+"найкращі моменти вашого життя на фотографіях, та зробити так, щоб кожна з "
+"них переносила вас у той самий час і простір! Ваші унікальні моменти і "
+"емоції - для мене найважливіші. Сподіваюсь, що наша перша зустріч буде "
+"початком довгострокової співпраці, а ваші фотографії збережуть ваші моменти "
+"щастя, кохання та емоцій назавжди. Залишайтесь на зв' язку зі мною, "
+"слідкуйте за моїми роботами та новинами."
+msgstr ""
+
+#: .\home\templates\home\index.html:44
+msgid "З найкращими побажаннями, Оксана, ваш фотограф."
+msgstr "Herzliche Grüße, Oksana, Ihre Fotografin."
+
+#: .\reviews\templates\reviews\all_reviews.html:11
+msgid "Ваш відгук"
+msgstr "Ihr Feedback"
+
+#: .\reviews\templates\reviews\all_reviews.html:16
+msgid "*Ваше ім'я"
+msgstr "*Ihr Name"
+
+#: .\reviews\templates\reviews\all_reviews.html:18
+msgid "Посилання на соцмережу"
+msgstr "Link zum sozialen Netzwerk"
+
+#: .\reviews\templates\reviews\all_reviews.html:22
+msgid "*Ваш відгук (Мінмальна кількість символів - 30)"
+msgstr "*Ihr Feedback (Mindestanzahl von 30 Zeichen)"
+
+#: .\reviews\templates\reviews\all_reviews.html:33
+msgid "Вибрати фото"
+msgstr "Wählen Sie ein Foto"
+
+#: .\reviews\templates\reviews\all_reviews.html:46
+msgid "Залишити відгук"
+msgstr "Eine Bewertung hinterlassen"
+
+#: .\services\templates\services\all_services.html:24
+msgid "Послуга включає:"
+msgstr "Der Dienst umfasst:"
+

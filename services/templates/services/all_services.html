@@ -1,5 +1,6 @@
 {% extends 'home/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block style %}
     <link rel="stylesheet" href="{% static 'services/styles/services.css' %}">{% endblock style %}
 {% block title %}Prices. {% endblock title %}
@@ -20,7 +21,7 @@
                         </div>
                         <div class="text-info">
                             <div class="service-include">
-                                <h3>Послуга включає:</h3>
+                                <h3>{% trans "Послуга включає:" %}</h3>
                                 <ul>
                                     {% for item in service.service_items.all %}
                                         <li>{{ item.item_info }};</li>

@@ -20,12 +20,14 @@
         <ul class="languages-list">
             {% for language in languages %}
                 <li class="name">
-                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                    <a href="/{{ language.code }}/{{ request.path_info|slice:'4:' }}"
+                            {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
                         {{ language.name_local }}
                     </a>
                 </li>
                 <li class="code">
-                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                    <a href="/{{ language.code }}/{{ request.path_info|slice:'4:' }}"
+                            {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
                         {{ language.code }}
                     </a>
                 </li>
@@ -40,12 +42,12 @@
     <h1 class="logo">KLYMENKO ОKSANA</h1>
     <nav>
         <ul class="nav-links">
-            <li><a href="{% url 'portfolio:portfolio' %}">ПОРТФОЛІО</a></li>
-            <li><a href="{% url 'home:about' %}">ПРО МЕНЕ</a></li>
-            <li><a href="{% url 'blog:all_posts' %}">БЛОГ</a></li>
-            <li><a href="{% url 'services:all_services' %}">ЦІНИ</a></li>
-            <li><a href="{% url 'home:contacts' %}">КОНТАКТИ</a></li>
-            <li><a href="{% url 'reviews:all_reviews' %}">ВІДГУКИ</a></li>
+            <li><a href="{% url 'portfolio:portfolio' %}">{% trans 'ПОРТФОЛІО' %}</a></li>
+            <li><a href="{% url 'home:about' %}">{% trans 'ПРО МЕНЕ' %}</a></li>
+            <li><a href="{% url 'blog:all_posts' %}">{% trans 'БЛОГ' %}</a></li>
+            <li><a href="{% url 'services:all_services' %}">{% trans 'ЦІНИ' %}</a></li>
+            <li><a href="{% url 'home:contacts' %}">{% trans 'КОНТАКТИ' %}</a></li>
+            <li><a href="{% url 'reviews:all_reviews' %}">{% trans 'ВІДГУКИ' %}</a></li>
         </ul>
     </nav>
 </header>
@@ -65,7 +67,7 @@
                 <ion-icon name="logo-flickr"></ion-icon>
             </a>
         </div>
-        <p class="footer-text">Фотограф, Клименко Оксана © 2023 All rights reserved</p>
+        <p class="footer-text">{% trans 'Фотограф, Клименко Оксана' %} © 2023 All rights reserved</p>
     </div>
 </footer>
 
