@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django import forms
 from services.models import ServiceItem, Service
+from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
 
 
 class CustomTextarea(forms.Textarea):
@@ -20,11 +21,12 @@ class ServiceItemForm(forms.ModelForm):
         }
 
 
-class ServiceItemInline(admin.TabularInline):
+class ServiceItemInline(TranslationTabularInline):
     model = ServiceItem
     form = ServiceItemForm
 
 
 @admin.register(Service)
-class PostAdmin(admin.ModelAdmin):
+class ServiceAdmin(TranslationAdmin):
+    readonly_fields = ['img_preview']
     inlines = [ServiceItemInline]
