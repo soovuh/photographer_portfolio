@@ -74,10 +74,11 @@
 }
 
 .text-block p {
+    width: 100%;
     margin-bottom: 10px;
     line-height: 1.6;
     font-weight: 600;
-    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 

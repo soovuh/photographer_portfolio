@@ -48,11 +48,11 @@ msgstr "KONTAKT"
 
 #: .\home\templates\home\base.html:50
 msgid "ВІДГУКИ"
-msgstr "REVIEWS"
+msgstr "FEEDBACK"
 
 #: .\home\templates\home\base.html:70
 msgid "Фотограф, Клименко Оксана"
-msgstr "Fotografin, Oksana Klymenko"
+msgstr "Photographin, Oksana Klymenko"
 
 #: .\home\templates\home\contacts.html:14
 msgid "КЛИМЕНКО ОКСАНА"
@@ -68,7 +68,7 @@ msgstr "Ihr Name"
 
 #: .\home\templates\home\contacts.html:38
 msgid "Ваш email"
-msgstr "Deine E-Mail"
+msgstr "Ihre E-Mail"
 
 #: .\home\templates\home\contacts.html:40
 msgid "Ваше повідомлення"
@@ -81,11 +81,11 @@ msgstr "Senden Sie"
 
 #: .\home\templates\home\index.html:10
 msgid "Moя історія"
-msgstr "Meine Story"
+msgstr "Meine Geschichte"
 
 #: .\home\templates\home\index.html:18
 msgid "Вітаю!"
-msgstr ""
+msgstr "Hallo!"
 
 #: .\home\templates\home\index.html:19
 msgid ""
@@ -94,6 +94,11 @@ msgid ""
 "пристрасть. Сьогодні я вирішила піти далі і розвиватися в цій сфері "
 "професійно."
 msgstr ""
+"Mein Name ist Oksana und ich freue mich, Sie auf meiner Website begrüßen. "
+"Fotografie war schon immer mein Hobby, aber mit der Zeit wurde daraus meine wahre Leidenschaft.  "
+"Heute habe ich beschlossen, in diesem Bereich weiterzumachen und mich beruflich weiterzuentwickeln. "
+
+
 
 #: .\home\templates\home\index.html:21
 msgid ""
@@ -103,10 +108,14 @@ msgid ""
 "сімейна зустріч, випускний вечір або просто незабутня прогулянка, заслуговує "
 "бути запам'ятаним у найкращій форм"
 msgstr ""
-
+"Meine Fotos entstehen mit Liebe zum Detail und der Fähigkeit, Momente festzuhalten.  "
+"Ich versuche, die Emotionen, Schönheit und Geschichte jedes Augenblicks durch die "
+"Linse meiner Kamera zu vermitteln.  Jeder wichtige Moment in Ihrem Leben, sei es eine Hochzeit, "
+"ein Familientreffen, ein Abschlussball oder einfach nur ein unvergesslicher Ausflug, verdient es, "
+"bestmöglich in Erinnerung zu bleiben."
 #: .\home\templates\home\index.html:30
 msgid "Чому саме я?"
-msgstr ""
+msgstr "Warum ich?"
 
 #: .\home\templates\home\index.html:31
 msgid ""
@@ -116,7 +125,11 @@ msgid ""
 "може зберегти миттєвості, що минають так швидко, і створити вам згадки на "
 "все життя."
 msgstr ""
-
+"Ich versuche immer, jedes Shooting individuell anzugehen und die "
+"Einzigartigkeit jeder Person und jedes Ereignisses zu verstehen.  "
+"Mein Ziel ist es, Natürlichkeit und besondere Momente einzufangen, "
+"die eine unvergessliche Erinnerung schaffen.  Ich glaube, dass Fotografie "
+"Momente, die so schnell vergehen, einfangen und Erinnerungen für ein Leben lang schaffen kann. "
 #: .\home\templates\home\index.html:32
 msgid ""
 "На моєму сайті ви зможете ознайомитися з моїми роботами та відчути "
@@ -124,10 +137,14 @@ msgid ""
 "особисто, обговорити ваші побажання та домовитися про зйомку. Разом ми "
 "можемо створити щось особливе і неповторне."
 msgstr ""
+"Auf meiner Website können Sie sich mit meinen Arbeiten vertraut machen und die "
+"Atmosphäre spüren, die ich in jedem Foto schaffe.  Gerne treffe ich Sie auch "
+"persönlich, bespreche Ihre Wünsche und vereinbare ein Shooting.  "
+"Gemeinsam können wir etwas Besonderes und Einzigartiges schaffen. "
 
 #: .\home\templates\home\index.html:40
 msgid "Чекаю на зустріч!"
-msgstr ""
+msgstr "Ich warte auf ein Treffen!"
 
 #: .\home\templates\home\index.html:42
 msgid ""
@@ -139,10 +156,17 @@ msgid ""
 "щастя, кохання та емоцій назавжди. Залишайтесь на зв' язку зі мною, "
 "слідкуйте за моїми роботами та новинами."
 msgstr ""
-
+"Vielen Dank für Ihren Besuch auf meiner Website.  "
+"Ich freue mich auf die Gelegenheit, die schönsten Momente "
+"Ihres Lebens in Fotos festzuhalten und Sie bei jedem einzelnen "
+"Moment in die gleiche Zeit und den gleichen Raum zu versetzen!  "
+"Deine einzigartigen Momente und Emotionen sind für mich das Wichtigste. "
+"Ich hoffe, dass unser erstes Treffen der Beginn einer langfristigen Zusammenarbeit "
+"sein wird und Ihre Fotos Ihre Momente des Glücks, der Liebe und der Emotionen für immer "
+"festhalten.  Bleiben Sie mit mir in Kontakt, verfolgen Sie meine Werke und Neuigkeiten. "
 #: .\home\templates\home\index.html:44
 msgid "З найкращими побажаннями, Оксана, ваш фотограф."
-msgstr "Herzliche Grüße, Oksana, Ihre Fotografin."
+msgstr "Liebe Grüße, Oksana, Ihre Photographin."
 
 #: .\reviews\templates\reviews\all_reviews.html:11
 msgid "Ваш відгук"
@@ -154,11 +178,11 @@ msgstr "*Ihr Name"
 
 #: .\reviews\templates\reviews\all_reviews.html:18
 msgid "Посилання на соцмережу"
-msgstr "Link zum sozialen Netzwerk"
+msgstr "Link zum Sozialnetzwerk"
 
 #: .\reviews\templates\reviews\all_reviews.html:22
 msgid "*Ваш відгук (Мінмальна кількість символів - 30)"
-msgstr "*Ihr Feedback (Mindestanzahl von 30 Zeichen)"
+msgstr "*Ihr Feedback (Mindestenzahl von 30 Zeichen)"
 
 #: .\reviews\templates\reviews\all_reviews.html:33
 msgid "Вибрати фото"
@@ -166,9 +190,9 @@ msgstr "Wählen Sie ein Foto"
 
 #: .\reviews\templates\reviews\all_reviews.html:46
 msgid "Залишити відгук"
-msgstr "Eine Bewertung hinterlassen"
+msgstr "Lassen Sie Feedback"
 
 #: .\services\templates\services\all_services.html:24
 msgid "Послуга включає:"
-msgstr "Der Dienst umfasst:"
+msgstr "Der Service beinhaltet:"
 
