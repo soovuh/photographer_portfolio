@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-
-from private import django_secret_key, db_password, mail_email, mail_password, aws_access_key_id, aws_secret_access_key, \
-    aws_storage_bucket_name
+from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
 
+
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,8 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = django_secret_key
-
+SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -89,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'photographer_portfolio_db',
         'USER': 'postgres',
-        'PASSWORD': db_password,
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -141,9 +140,9 @@ USE_TZ = True
 
 # DEBUG=False
 # AWS settings
-AWS_ACCESS_KEY_ID = aws_access_key_id
-AWS_SECRET_ACCESS_KEY = aws_secret_access_key
-AWS_STORAGE_BUCKET_NAME = aws_storage_bucket_name
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 AWS_DEFAULT_ACL = 'public-read'
@@ -164,5 +163,5 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = mail_email
-EMAIL_HOST_PASSWORD = mail_password
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")

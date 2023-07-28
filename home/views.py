@@ -1,10 +1,10 @@
+from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
 from home.forms import ContactForm
-from private import mail_email
 
 
 def index(request):
@@ -27,8 +27,8 @@ def contacts(request):
             send_mail(
                 subject='Email From Site',
                 message=plain_message,
-                from_email=mail_email,
-                recipient_list=[mail_email],
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_HOST_USER],
                 html_message=html,
             )
             return redirect('home:contacts')

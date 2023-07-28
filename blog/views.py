@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 
 from blog.models import Post
