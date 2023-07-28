@@ -1,6 +1,5 @@
 venv
-private.py
+.env
 __pycache__
 .idea
 media
-credentials_google.json

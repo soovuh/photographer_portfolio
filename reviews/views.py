@@ -1,9 +1,9 @@
+from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
-from private import mail_email
 from reviews.forms import ReviewForm
 from reviews.models import Review
 
@@ -25,8 +25,8 @@ def all_reviews(request):
             send_mail(
                 subject='New Review From Site',
                 message=plain_message,
-                from_email=mail_email,
-                recipient_list=[mail_email],
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_HOST_USER],
                 html_message=html,
             )
             return redirect('reviews:all_reviews')
