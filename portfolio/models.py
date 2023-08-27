@@ -18,7 +18,8 @@ class Category(models.Model):
 
 @receiver(pre_delete, sender=Category)
 def delete_image_of_model_category(sender, instance, **kwargs):
-    delete_image_from_s3(instance, 'main_image')
+    if not instance.has_references():
+        delete_image_from_s3(instance, 'main_image')
 
 
 class Photo(models.Model):
@@ -34,4 +35,5 @@ class Photo(models.Model):
 
 @receiver(pre_delete, sender=Photo)
 def delete_image_of_model_category(sender, instance, **kwargs):
-    delete_image_from_s3(instance, 'image')
+    if not instance.has_references():
+        delete_image_from_s3(instance, 'image')
