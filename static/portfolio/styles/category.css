@@ -37,13 +37,12 @@ body.static {
 }
 
 
-
-
 img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
     display: inline-block;
+
 }
 
 .photo {
@@ -51,6 +50,8 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .fullscreen-container {
@@ -115,8 +116,6 @@ img {
 .fullscreen-image.fade_in {
     opacity: 1;
 }
-
-
 
 
 @media (max-width: 768px) {

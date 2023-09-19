@@ -22,7 +22,7 @@ def all_categories(request):
 
 def category_photos(request, pk):
     category = get_object_or_404(Category, pk=pk)
-    related_photos = Photo.objects.filter(category=category).order_by('id')
+    related_photos = Photo.objects.filter(category=category).order_by('-id')
     photo_columns = {'1': [], '2': []}
     num = '1'
     for photo in related_photos:

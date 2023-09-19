@@ -45,6 +45,10 @@ header {
     font-weight: bold;
 }
 
+.phone {
+    text-decoration: none;
+}
+
 .languages-list {
     list-style: none;
     text-align: center;
@@ -92,8 +96,9 @@ header {
     padding-inline-start: 0px;
 }
 
+/* margin - 30px if prices not in comment */
 .nav-links li {
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .nav-links li a {
