@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Photo(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='portfolio media')
+    image = models.ImageField(upload_to='portfolio_media')
 
     def __str__(self):
         return f'({self.category.name})'

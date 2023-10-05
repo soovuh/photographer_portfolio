@@ -1,0 +1,166 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.service-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.service {
+    min-width: 70%;
+    max-width: 100%;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.service-head {
+    width: 100%;
+    background-color: darkslategray;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.service-head h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.service-head p {
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.service-image {
+    width: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-bottom-left-radius: 20px;
+}
+
+.service-image img {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.text-info {
+    width: 50%;
+    padding: 1%;
+    overflow-wrap: break-word;
+}
+
+
+.endline {
+    border-bottom: 1px solid;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+
+.service-include {
+    margin-bottom: 15px;
+}
+
+.service-include h3 {
+    padding-left: 10px;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-include ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.service-include li {
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.service-info {
+    margin-top: 15px;
+}
+
+.service-info p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 20px;
+}
+
+
+@media (max-width: 750px) {
+    .content-wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .service-image {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .text-info {
+        width: 100%;
+        padding: 3%;
+
+    }
+
+}
+
+@media (max-width: 550px) {
+    .service-wrapper {
+        width: 100%;
+    }
+    .service-image {
+        justify-content: center;
+    }
+    .service-image img {
+        max-width: 100%;
+    }
+
+
+}
+
+
+
+
